@@ -22,25 +22,36 @@ public class WeatherSummary {
         // Hint: use Scanner. nextDouble() and hasNextDouble() will be helpful here!
         Scanner scan = new Scanner(System.in);
 
-        double max; 
-        double min; 
-        double sum = 0;
-        int count = 0; 
+        double temp = scan.nextDouble();
+        double max = temp;
+        double min = temp; 
+
+        double sum = temp;
+        int count = 1; 
         while(scan.hasNextDouble())
         {
-            double temp = scan.nextDouble();
+            temp = scan.nextDouble();
 
             sum += temp; 
             count++; 
 
             if(temp > max)
+            {
                 max = temp;
+            }
 
             if(temp < max)
+            {
                 min = temp; 
+            }
 
         }
-        
+        double avg = sum / count; 
+
+        System.out.println("Max: " + max);
+        System.out.println("Min: " + min);
+        System.out.println("Avg: " + avg);
+
 
 
         
