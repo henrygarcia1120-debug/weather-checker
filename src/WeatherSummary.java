@@ -33,6 +33,12 @@ public class WeatherSummary {
             sum += temp; 
             count++; 
 
+            if(temp > max)
+                max = temp;
+
+            if(temp < max)
+                min = temp; 
+
         }
         
 
